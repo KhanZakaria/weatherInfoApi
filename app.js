@@ -14,7 +14,7 @@ const geoCodeApi = async ()=>{
         
         if(inputCity.toLowerCase().includes(data[0].name.toLowerCase())){
             
-            temprature.innerHTML = `${Math.round(weatherData.main.temp - 273.15)} &deg;`;
+            temprature.innerHTML = `${Math.round(weatherData.main.temp - 273.15)} &deg;c`;
             currentCity.innerHTML = data[0].name;
             countryName.innerHTML = `Country : ${data[0].country}`;
             humidity.innerHTML = `${weatherData.main.humidity} % `;
