@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <section class="">
+        <div class="container">
+            <div class="main_content">
+                <div class="search-country">
+                    <form onsubmit="geoCodeApi(); return false" id="searchForm">
+                        <input type="text"  placeholder="Enter City Name" id="cityName" />
+                        <button type="submit" id="submit"><img src="./images/magnifying-glass.png" alt="image" class="searchIcon"> </button>
+                    </form>
+                </div>
+                <div class="weatherData">
+                   <img id="weatherImage" src="./images/sun.png" alt="sunny"/>
+                    <span id="temprature">Temprature</span></span>
+                    <span id="city">City Name</span>
+                    <span id="countryName"></span>
+
+                    <div class="othersData">
+                        <div>
+                            <span><img src="./images/humidity.png" alt="Humidity" class="humadityImage"/></span>
+                            <span id="humidity">humidity</span>
+                        </div>
+                        <div>
+                            <span><img src="./images/wind-turbine.png" alt="Wind" class="windImage"/></span>
+                            <span id="windSpeed">Wind</span>
+                        </div>
+                    </div>
+                </div>
+                <span class="warning"> [Warning : please input city only to get accurate data]</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="./app.js"></script>
+</body>
+</html>
